@@ -23,7 +23,6 @@
 
     --font-heading: 'Barlow Condensed', sans-serif;
     --font-body:    'Barlow', sans-serif;
-    --font-display: 'Fraunces', serif;
 
     --nav-height: 80px;
     --transition: 0.3s ease;
@@ -373,23 +372,15 @@ ul { list-style: none; }
 }
 
 .hero-title {
-    font-family: var(--font-display);
-    font-size: clamp(3.2rem, 9vw, 6.4rem);
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    line-height: 0.98;
+    font-family: var(--font-heading);
+    font-size: clamp(3.5rem, 10vw, 7rem);
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 0.95;
     color: var(--white);
     text-transform: uppercase;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     text-shadow: 0 4px 30px rgba(0,0,0,0.5);
-}
-
-.hero-divider {
-    width: 100%;
-    max-width: 460px;
-    height: 1px;
-    background: linear-gradient(to right, rgba(245,196,0,0.6), rgba(255,255,255,0.12));
-    margin-bottom: 28px;
 }
 
 .hero-sub {
@@ -397,44 +388,13 @@ ul { list-style: none; }
     font-size: clamp(1rem, 2vw, 1.2rem);
     font-weight: 300;
     color: var(--light-grey);
-    margin-bottom: 40px;
+    margin-bottom: 36px;
     letter-spacing: 1px;
 }
 
 .hero-btn {
     font-size: 0.9rem;
     padding: 16px 40px;
-}
-
-.hero-stats {
-    display: flex;
-    gap: 40px;
-    margin-top: 48px;
-    padding-top: 28px;
-    border-top: 1px solid rgba(255,255,255,0.12);
-}
-
-.hero-stat {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.hero-stat-num {
-    font-family: var(--font-display);
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 600;
-    color: var(--yellow);
-    line-height: 1;
-}
-
-.hero-stat-lbl {
-    font-family: var(--font-heading);
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    color: var(--grey);
-    text-transform: uppercase;
 }
 
 .hero-scroll-indicator {
@@ -708,9 +668,9 @@ ul { list-style: none; }
 }
 
 .stat-num {
-    font-family: var(--font-display);
-    font-size: clamp(2.2rem, 4vw, 3.2rem);
-    font-weight: 600;
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
     color: var(--yellow);
     line-height: 1;
 }
