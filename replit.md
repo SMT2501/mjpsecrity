@@ -11,11 +11,11 @@ access control services.
 - External assets loaded via CDN: Google Fonts (Barlow / Barlow Condensed) and
   Font Awesome icons.
 
-## Status
-Imported from GitHub. No run workflow has been configured yet — the user's
-current focus is on enhancing the UI/UX rather than running/deploying it, so
-no dev server has been set up. When ready to preview the site, it just needs
-to be served as static files (e.g. a simple static file server workflow).
+## Running the site
+The "Start application" workflow serves the static files with `npx serve -l 5000 .`
+on port 5000 (webview). No build step is required — edits to `index.html`,
+`styles.css`, or `script.js` take effect on browser refresh; restart the
+workflow only if it stops.
 
 ## User preferences
 - Working on this project to improve UI/UX design and polish.
