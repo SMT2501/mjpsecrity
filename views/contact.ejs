@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include('partials/head', { title, description, canonicalUrl, ogImage, structuredData, site }) %>
+</head>
+<body>
+<%- include('partials/nav', { active: 'contact', site }) %>
+
+    <section class="page-hero">
+        <div class="container">
+            <p class="hero-eyebrow">GET IN TOUCH</p>
+            <h1 class="page-title">CONTACT MJP SECURITY</h1>
+            <div class="title-bar"></div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+
+                <div class="contact-info">
+                    <h2 class="section-title">GET IN TOUCH</h2>
+                    <div class="title-bar"></div>
+                    <p>Ready to secure your home or business? Contact us today for a free consultation and quote. Our team is standing by 24/7.</p>
+
+                    <div class="contact-items">
+                        <a href="tel:<%= site.phoneHref %>" class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div class="contact-detail">
+                                <span class="contact-label">CALL US</span>
+                                <span class="contact-value"><%= site.phoneDisplay %></span>
+                            </div>
+                        </a>
+                        <a href="<%= site.whatsappLink %>" target="_blank" rel="noopener noreferrer" class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div class="contact-detail">
+                                <span class="contact-label">WHATSAPP</span>
+                                <span class="contact-value">Click to chat</span>
+                            </div>
+                        </a>
+                        <a href="mailto:<%= site.email %>" class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-detail">
+                                <span class="contact-label">EMAIL</span>
+                                <span class="contact-value"><%= site.email %></span>
+                            </div>
+                        </a>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-detail">
+                                <span class="contact-label">LOCATION</span>
+                                <span class="contact-value"><%= site.address %></span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                            <div class="contact-detail">
+                                <span class="contact-label">AVAILABILITY</span>
+                                <span class="contact-value">24/7 Emergency Response</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <p>SOCIAL LINKS</p>
+                        <a href="<%= site.facebook %>" target="_blank" rel="noopener noreferrer" class="social-btn">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrap">
+                    <h2 class="section-title">REQUEST A CALL BACK</h2>
+                    <div class="title-bar"></div>
+                    <form id="callbackForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" name="firstName" placeholder="First Name" required autocomplete="given-name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="lastName" placeholder="Last Name" required autocomplete="family-name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email Address" required autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Phone Number" required autocomplete="tel">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="company" placeholder="Company Name (optional)" autocomplete="organization">
+                        </div>
+                        <div class="form-group">
+                            <select name="service" aria-label="Service of interest">
+                                <option value="">Which service are you interested in? (optional)</option>
+                                <option value="Installations">Installations</option>
+                                <option value="Monitoring">Monitoring</option>
+                                <option value="Armed Response">Armed Response</option>
+                                <option value="CCTV">CCTV</option>
+                                <option value="Access Control">Access Control</option>
+                                <option value="Not sure / General enquiry">Not sure / General enquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Message / Requirements" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary submit-btn">SEND <i class="fas fa-paper-plane"></i></button>
+                        <div class="form-success" id="formSuccess">
+                            <i class="fas fa-check-circle"></i> Thank you! We will call you back shortly.
+                        </div>
+                        <div class="form-error" id="formError">
+                            <i class="fas fa-exclamation-circle"></i> Something went wrong sending your message. Please call or WhatsApp us directly.
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <iframe
+            title="MJP Security service area — Cape Town"
+            src="https://www.google.com/maps?q=Cape%20Town%2C%20South%20Africa&output=embed"
+            width="100%" height="360" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+<%- include('partials/footer', { site }) %>
+<script src="/js/main.js"></script>
+</body>
+</html>

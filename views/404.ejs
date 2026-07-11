@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include('partials/head', { title: 'Page Not Found | MJP Security', description: 'The page you are looking for could not be found.', canonicalUrl, ogImage, structuredData: '{}', site }) %>
+</head>
+<body>
+<%- include('partials/nav', { active: '', site }) %>
+    <section class="page-hero not-found">
+        <div class="container">
+            <p class="hero-eyebrow">404</p>
+            <h1 class="page-title">PAGE NOT FOUND</h1>
+            <div class="title-bar"></div>
+            <p class="page-lead">The page you're looking for doesn't exist or has moved.</p>
+            <a href="/" class="btn-primary mt-2">BACK TO HOME</a>
+        </div>
+    </section>
+<%- include('partials/footer', { site }) %>
+<script src="/js/main.js"></script>
+</body>
+</html>

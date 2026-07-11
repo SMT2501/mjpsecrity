@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include('partials/head', { title, description, canonicalUrl, ogImage, structuredData, site }) %>
+</head>
+<body>
+<%- include('partials/nav', { active: 'services', site }) %>
+
+    <section class="service-hero">
+        <div class="service-hero-bg">
+            <picture>
+                <source srcset="/images/<%= service.image %>.webp?v=<%= assetVersion %>" type="image/webp">
+                <img src="/images/<%= service.image %>.jpg?v=<%= assetVersion %>" alt="<%= service.name %> — MJP Security" fetchpriority="high">
+            </picture>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container service-hero-content">
+            <p class="hero-eyebrow"><a href="/services" class="breadcrumb-link">SERVICES</a> / <%= service.name.toUpperCase() %></p>
+            <h1 class="page-title"><%= service.name.toUpperCase() %></h1>
+        </div>
+    </section>
+
+    <section class="service-detail">
+        <div class="container service-detail-grid">
+            <div class="service-detail-main">
+                <h2 class="section-title">OVERVIEW</h2>
+                <div class="title-bar"></div>
+                <p class="service-detail-intro"><%= service.intro %></p>
+
+                <h3 class="service-detail-subtitle">WHAT'S INCLUDED</h3>
+                <ul class="service-points">
+                    <% service.points.forEach(function(p) { %>
+                    <li><i class="fas fa-check-circle"></i> <%= p %></li>
+                    <% }); %>
+                </ul>
+
+                <p class="service-detail-closing"><%= service.closing %></p>
+
+                <a href="/contact" class="btn-primary mt-2">GET A QUOTE FOR <%= service.name.toUpperCase() %></a>
+            </div>
+
+            <aside class="service-detail-sidebar">
+                <div class="sidebar-card">
+                    <h3>OUR SERVICES</h3>
+                    <div class="title-bar"></div>
+                    <ul class="sidebar-list">
+                        <% allServices.forEach(function(s) { %>
+                        <li>
+                            <a href="/services/<%= s.slug %>" class="<%= s.slug === service.slug ? 'active' : '' %>">
+                                <i class="fas <%= s.icon %>"></i> <%= s.name %>
+                            </a>
+                        </li>
+                        <% }); %>
+                    </ul>
+                </div>
+                <div class="sidebar-card sidebar-cta">
+                    <h3>NEED THIS SERVICE?</h3>
+                    <p>Speak to our team for a free consultation and quote.</p>
+                    <a href="tel:<%= site.phoneHref %>" class="btn-primary sidebar-btn"><i class="fas fa-phone"></i> <%= site.phoneDisplay %></a>
+                    <a href="<%= site.whatsappLink %>" target="_blank" rel="noopener noreferrer" class="btn-outline sidebar-btn"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section class="cta-strip">
+        <div class="container cta-inner">
+            <div>
+                <h2 class="section-title">READY TO SECURE YOUR HOME OR BUSINESS?</h2>
+                <p>Get a free consultation and quote from our team — standing by 24/7.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="/contact" class="btn-primary">REQUEST A QUOTE</a>
+                <a href="tel:<%= site.phoneHref %>" class="btn-outline"><i class="fas fa-phone"></i> <%= site.phoneDisplay %></a>
+            </div>
+        </div>
+    </section>
+
+<%- include('partials/footer', { site }) %>
+<script src="/js/main.js"></script>
+</body>
+</html>

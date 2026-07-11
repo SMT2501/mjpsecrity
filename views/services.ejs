@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include('partials/head', { title, description, canonicalUrl, ogImage, structuredData, site }) %>
+</head>
+<body>
+<%- include('partials/nav', { active: 'services', site }) %>
+
+    <section class="page-hero">
+        <div class="container">
+            <p class="hero-eyebrow">WHAT WE DO</p>
+            <h1 class="page-title">OUR SERVICES</h1>
+            <div class="title-bar"></div>
+            <p class="page-lead">Complete, end-to-end security for homes and businesses across Cape Town — from the first sensor to the officer at your gate.</p>
+        </div>
+    </section>
+
+    <section class="services-strip services-strip-page">
+        <div class="container">
+            <div class="services-grid">
+                <% services.forEach(function(s) { %>
+                <div class="service-card service-card-photo">
+                    <picture>
+                        <source srcset="/images/<%= s.image %>.webp?v=<%= assetVersion %>" type="image/webp">
+                        <img src="/images/<%= s.image %>.jpg?v=<%= assetVersion %>" alt="<%= s.name %> — MJP Security" loading="lazy" width="400" height="260">
+                    </picture>
+                    <div class="service-card-body">
+                        <div class="service-icon-wrap">
+                            <i class="fas <%= s.icon %>"></i>
+                        </div>
+                        <h3><%= s.name.toUpperCase() %></h3>
+                        <p><%= s.shortDesc %></p>
+                        <a href="/services/<%= s.slug %>" class="service-link">READ MORE <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-strip">
+        <div class="container cta-inner">
+            <div>
+                <h2 class="section-title">NOT SURE WHAT YOU NEED?</h2>
+                <p>Tell us about your property and we'll recommend the right combination of services.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="/contact" class="btn-primary">REQUEST A QUOTE</a>
+                <a href="tel:<%= site.phoneHref %>" class="btn-outline"><i class="fas fa-phone"></i> <%= site.phoneDisplay %></a>
+            </div>
+        </div>
+    </section>
+
+<%- include('partials/footer', { site }) %>
+<script src="/js/main.js"></script>
+</body>
+</html>

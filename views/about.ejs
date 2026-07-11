@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include('partials/head', { title, description, canonicalUrl, ogImage, structuredData, site }) %>
+</head>
+<body>
+<%- include('partials/nav', { active: 'about', site }) %>
+
+    <section class="page-hero">
+        <div class="container">
+            <p class="hero-eyebrow">ABOUT MJP SECURITY</p>
+            <h1 class="page-title">YOUR COMMUNITY ARMED RESPONSE SERVICE</h1>
+            <div class="title-bar"></div>
+        </div>
+    </section>
+
+    <section class="about about-page">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-block about-who">
+                    <h2 class="section-title">WHO WE ARE</h2>
+                    <div class="title-bar"></div>
+                    <p>MJP Security is a Cape Town-based security company committed to delivering the best products and services to all our clients. We are passionate about creating safer homes, safer businesses, and safer neighbourhoods for our community.</p>
+                    <p>Our team of PSIRA registered professionals provides round-the-clock protection with honesty, integrity, and transparency at the core of everything we do. We sleep at night only knowing that you do too.</p>
+                    <p>From installations to monitoring, armed response, CCTV, and access control, we offer a complete end-to-end security solution — one company, one number to call, one team that knows your property.</p>
+                    <a href="/contact" class="btn-primary mt-2">CONTACT US</a>
+                </div>
+
+                <div class="about-image-wrap">
+                    <div class="about-image-inner">
+                        <div class="about-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>PSIRA<br>Registered</span>
+                        </div>
+                        <picture>
+                            <source srcset="/images/about-team.webp?v=<%= assetVersion %>" type="image/webp">
+                            <img src="/images/about-team.jpg?v=<%= assetVersion %>" alt="MJP Security PSIRA-registered security officer" loading="lazy" width="240" height="240">
+                        </picture>
+                    </div>
+                </div>
+
+                <div class="about-block about-commitment">
+                    <h2 class="section-title">OUR COMMITMENT</h2>
+                    <div class="title-bar"></div>
+                    <p>Our commitment is that we will give you our best always — with honesty, integrity, transparency, and a dash of speed.</p>
+                    <p>Our passion lies in creating safer homes, safer businesses, and safer neighbourhoods for our community in Cape Town and the surrounding areas.</p>
+                    <div class="commitment-pillars">
+                        <div class="pillar"><i class="fas fa-handshake"></i><span>Honesty</span></div>
+                        <div class="pillar"><i class="fas fa-balance-scale"></i><span>Integrity</span></div>
+                        <div class="pillar"><i class="fas fa-bolt"></i><span>Speed</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us">
+        <div class="container">
+            <div class="why-us-inner">
+                <div class="why-us-text">
+                    <h2 class="section-title">WHY CHOOSE US?</h2>
+                    <div class="title-bar"></div>
+                    <p class="why-intro">We are passionate about our business and our customers, and truly understand that happy customers are what keeps us in business.</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i> Expertise and Experience</li>
+                        <li><i class="fas fa-check-circle"></i> Customised Security Solutions</li>
+                        <li><i class="fas fa-check-circle"></i> 24/7 Monitoring &amp; Support</li>
+                        <li><i class="fas fa-check-circle"></i> Quick Emergency Response</li>
+                        <li><i class="fas fa-check-circle"></i> Advanced Technology</li>
+                        <li><i class="fas fa-check-circle"></i> Risk Assessment &amp; Management</li>
+                        <li><i class="fas fa-check-circle"></i> Legal &amp; Compliance Knowledge</li>
+                        <li><i class="fas fa-check-circle"></i> Peace of Mind</li>
+                    </ul>
+                    <p class="why-tagline">Our passion lies in creating safer homes, safer businesses, and safer neighbourhoods for our community.</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-num">24/7</span>
+                        <span class="stat-lbl">Active Protection</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">5+</span>
+                        <span class="stat-lbl">Services Offered</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-lbl">PSIRA Registered</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">CPT</span>
+                        <span class="stat-lbl">Cape Town Based</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-strip">
+        <div class="container cta-inner">
+            <div>
+                <h2 class="section-title">READY TO SECURE YOUR HOME OR BUSINESS?</h2>
+                <p>Get a free consultation and quote from our team — standing by 24/7.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="/contact" class="btn-primary">REQUEST A QUOTE</a>
+                <a href="tel:<%= site.phoneHref %>" class="btn-outline"><i class="fas fa-phone"></i> <%= site.phoneDisplay %></a>
+            </div>
+        </div>
+    </section>
+
+<%- include('partials/footer', { site }) %>
+<script src="/js/main.js"></script>
+</body>
+</html>

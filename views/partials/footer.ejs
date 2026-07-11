@@ -1,0 +1,37 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <div class="logo-badge">
+                    <span class="logo-initials">MJP</span>
+                </div>
+                <div>
+                    <span class="logo-name">SECURITY</span>
+                    <p class="footer-tagline"><%= site.tagline %></p>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <a href="/">Home</a>
+                <a href="/services/installations">Installations</a>
+                <a href="/services/monitoring">Monitoring</a>
+                <a href="/services/armed-response">Armed Response</a>
+                <a href="/services/cctv">CCTV</a>
+                <a href="/services/access-control">Access Control</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </div>
+            <div class="footer-contact">
+                <a href="tel:<%= site.phoneHref %>"><i class="fas fa-phone"></i> <%= site.phoneDisplay %></a>
+                <a href="mailto:<%= site.email %>"><i class="fas fa-envelope"></i> <%= site.email %></a>
+                <span><i class="fas fa-map-marker-alt"></i> <%= site.address %></span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; <%= new Date().getFullYear() %> MJP Security. All rights reserved. Cape Town, South Africa.</p>
+        </div>
+    </div>
+</footer>
+
+<a href="<%= site.whatsappLink %>" class="whatsapp-fab" target="_blank" rel="noopener noreferrer" aria-label="Chat with MJP Security on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>

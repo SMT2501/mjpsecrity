@@ -1,0 +1,45 @@
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="/" class="nav-logo">
+            <div class="logo-badge">
+                <span class="logo-initials">MJP</span>
+            </div>
+            <span class="logo-name">SECURITY</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="/" class="nav-link <%= active === 'home' ? 'active' : '' %>">HOME</a></li>
+            <li><a href="/services" class="nav-link <%= active === 'services' ? 'active' : '' %>">SERVICES</a></li>
+            <li><a href="/about" class="nav-link <%= active === 'about' ? 'active' : '' %>">ABOUT</a></li>
+            <li><a href="/contact" class="nav-link <%= active === 'contact' ? 'active' : '' %>">CONTACT</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <a href="/contact" class="btn-primary nav-cta">GET IN TOUCH</a>
+            <a href="<%= site.facebook %>" target="_blank" rel="noopener noreferrer" class="nav-social" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="/" class="mobile-link">HOME</a></li>
+            <li><a href="/services" class="mobile-link">SERVICES</a></li>
+            <li><a href="/services/installations" class="mobile-link mobile-sublink">— Installations</a></li>
+            <li><a href="/services/monitoring" class="mobile-link mobile-sublink">— Monitoring</a></li>
+            <li><a href="/services/armed-response" class="mobile-link mobile-sublink">— Armed Response</a></li>
+            <li><a href="/services/cctv" class="mobile-link mobile-sublink">— CCTV</a></li>
+            <li><a href="/services/access-control" class="mobile-link mobile-sublink">— Access Control</a></li>
+            <li><a href="/about" class="mobile-link">ABOUT</a></li>
+            <li><a href="/contact" class="mobile-link mobile-cta">GET IN TOUCH</a></li>
+        </ul>
+    </div>
+</nav>
