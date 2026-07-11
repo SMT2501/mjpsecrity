@@ -7,6 +7,13 @@
 <%- include('partials/nav', { active: 'services', site }) %>
 
     <section class="page-hero">
+        <div class="page-hero-bg">
+            <picture>
+                <source srcset="/images/hero-armed-response.webp?v=<%= assetVersion %>" type="image/webp">
+                <img src="/images/hero-armed-response.jpg?v=<%= assetVersion %>" alt="MJP Security patrol vehicles on duty at a Cape Town home at night" fetchpriority="high">
+            </picture>
+            <div class="hero-overlay"></div>
+        </div>
         <div class="container">
             <p class="hero-eyebrow">WHAT WE DO</p>
             <h1 class="page-title">OUR SERVICES</h1>
