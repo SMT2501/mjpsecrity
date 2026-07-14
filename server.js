@@ -40,14 +40,16 @@ function localBusinessSchema(req) {
         '@context': 'https://schema.org',
         '@type': 'SecurityService',
         name: 'MJP Security',
-        description: "Cape Town's trusted community armed response, CCTV, monitoring, installations and access control specialists.",
+        description: "Cape Town's trusted armed response, guarding, CCTV, monitoring, and security training specialists.",
         image: siteUrl(req, '/images/hero-armed-response.jpg'),
         telephone: site.phoneHref,
         email: site.email,
         url: siteUrl(req, '/'),
         address: {
             '@type': 'PostalAddress',
-            addressLocality: 'Cape Town',
+            streetAddress: 'Unit 9 Labella Park',
+            addressLocality: 'Stikland Industrial, Cape Town',
+            postalCode: '7530',
             addressCountry: 'ZA',
         },
         areaServed: 'Cape Town, South Africa',
@@ -103,7 +105,7 @@ app.get('/about', (req, res) => {
 app.get('/services', (req, res) => {
     res.render('services', {
         title: 'Our Services | MJP Security',
-        description: 'Installations, monitoring, armed response, CCTV, and access control — complete security solutions from MJP Security in Cape Town.',
+        description: 'Guarding, armed response, CCTV, monitoring, electric fencing, VIP protection, and security training — complete security solutions from MJP Security in Cape Town.',
         canonicalUrl: siteUrl(req, '/services'),
         ogImage: siteUrl(req, '/images/hero-armed-response.jpg'),
         structuredData: localBusinessSchema(req),

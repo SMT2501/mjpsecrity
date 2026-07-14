@@ -90,6 +90,7 @@ ul { list-style: none; }
 }
 
 .mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
 
 /* =============================================
    NAVBAR
@@ -416,6 +417,12 @@ ul { list-style: none; }
 /* =============================================
    SERVICES STRIP
    ============================================= */
+.services-view-all {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
 .services-strip {
     background-color: var(--dark-2);
     padding: 70px 0;
@@ -604,6 +611,46 @@ ul { list-style: none; }
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: center;
+}
+
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+    margin-bottom: 20px;
+}
+
+.why-us-card {
+    background-color: var(--dark-3);
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 32px 26px;
+    transition: border-color var(--transition), transform var(--transition);
+}
+
+.why-us-card:hover {
+    border-color: var(--yellow);
+    transform: translateY(-4px);
+}
+
+.why-us-card i {
+    color: var(--yellow);
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.why-us-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.why-us-card p {
+    color: var(--grey);
+    font-size: 0.88rem;
+    line-height: 1.7;
 }
 
 .why-intro {
@@ -872,6 +919,13 @@ textarea { resize: vertical; min-height: 100px; }
     display: flex;
     align-items: center;
     gap: 14px;
+}
+
+.logo-img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .footer-tagline {

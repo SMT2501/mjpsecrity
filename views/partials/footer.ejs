@@ -2,9 +2,7 @@
     <div class="container">
         <div class="footer-inner">
             <div class="footer-logo">
-                <div class="logo-badge">
-                    <span class="logo-initials">MJP</span>
-                </div>
+                <img src="<%= site.logoEmblem %>?v=<%= assetVersion %>" alt="MJP Security" class="logo-img">
                 <div>
                     <span class="logo-name">SECURITY</span>
                     <p class="footer-tagline"><%= site.tagline %></p>
@@ -12,16 +10,17 @@
             </div>
             <div class="footer-nav">
                 <a href="/">Home</a>
-                <a href="/services/installations">Installations</a>
-                <a href="/services/monitoring">Monitoring</a>
+                <a href="/services/guarding">Guarding</a>
                 <a href="/services/armed-response">Armed Response</a>
+                <a href="/services/monitoring">Monitoring</a>
                 <a href="/services/cctv">CCTV</a>
-                <a href="/services/access-control">Access Control</a>
+                <a href="/services">All Services</a>
                 <a href="/about">About</a>
                 <a href="/contact">Contact</a>
             </div>
             <div class="footer-contact">
                 <a href="tel:<%= site.phoneHref %>"><i class="fas fa-phone"></i> <%= site.phoneDisplay %></a>
+                <a href="<%= site.whatsappLink %>" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> <%= site.whatsappDisplay %></a>
                 <a href="mailto:<%= site.email %>"><i class="fas fa-envelope"></i> <%= site.email %></a>
                 <span><i class="fas fa-map-marker-alt"></i> <%= site.address %></span>
             </div>

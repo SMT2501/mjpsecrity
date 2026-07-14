@@ -39,7 +39,7 @@
                 <p class="section-sub">Complete protection for homes and businesses across Cape Town.</p>
             </div>
             <div class="services-grid">
-                <% services.forEach(function(s) { %>
+                <% services.slice(0, 8).forEach(function(s) { %>
                 <div class="service-card">
                     <div class="service-icon-wrap">
                         <i class="fas <%= s.icon %>"></i>
@@ -49,6 +49,9 @@
                     <a href="/services/<%= s.slug %>" class="service-link">READ MORE <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <% }); %>
+            </div>
+            <div class="services-view-all">
+                <a href="/services" class="btn-outline">VIEW ALL <%= services.length %> SERVICES</a>
             </div>
         </div>
     </section>
