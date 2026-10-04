@@ -1,1 +1,0 @@
-- [Stale asset caching masks CSS/image fixes](stale-asset-caching-debugging.md) — if a hero/bg image "won't render" despite correct CSS/files, suspect the screenshot browser's cached copy before re-debugging CSS.

@@ -1,3 +1,10 @@
 node_modules/
 data/leads.jsonl
 .env
+.agents/
+.claude/
+.firebase/
+skills/
+skills-lock.json
+nul
+*.stackdump
